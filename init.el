@@ -79,6 +79,12 @@
     ;; git integration
     magit
 
+    php-auto-yasnippets
+    ac-emmet
+    emmet-mode
+    nyan-mode
+    powerline
+    neotree
     yaml-mode
     coffee-mode
     scss-mode
@@ -141,6 +147,7 @@
 
 ;; Langauage-specific
 (load "setup-clojure.el")
+(load "setup-web.el")
 (load "setup-js.el")
 (load "setup-css.el")
 (load "setup-yaml.el")
@@ -152,13 +159,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(coffee-tab-width 2))
+ '(coffee-tab-width 2)
+ '(custom-safe-themes
+   (quote
+    ("3a08a6a704a490481c0145ec5cd67beb95a2596f611e09ad6c85be6353d2a7dc" "9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" "0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;; '(magit-item-highlight ((t (:background "gray10"))))
- ;;'(mode-line ((t (:foreground "#333" :background "#bad063" :box nil))))
- )
+ '(default ((t (:background nil)))))
 (put 'downcase-region 'disabled nil)

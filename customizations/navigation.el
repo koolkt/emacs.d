@@ -61,3 +61,6 @@
 (projectile-global-mode)
 
 (global-set-key (kbd "M-n") 'imenu)
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))

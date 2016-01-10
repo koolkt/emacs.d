@@ -10,3 +10,8 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+(powerline-default-theme)
+(nyan-mode)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
