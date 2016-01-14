@@ -78,7 +78,8 @@
 
     ;; git integration
     magit
-
+    
+    flycheck
     php-auto-yasnippets
     ac-emmet
     emmet-mode
