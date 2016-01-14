@@ -13,3 +13,8 @@ archive-contents
 cider
 \.mc-lists.el
 elpa/*
+*~
+ido.last*
+elpa/*
+.recentf~
+*recentf*
