@@ -74,3 +74,5 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+ (add-hook 'before-save-hook 'delete-trailing-whitespace)
