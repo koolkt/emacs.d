@@ -55,6 +55,20 @@
   (append flycheck-disabled-checkers
     '(json-jsonlist)))
 
+
+(defun my/use-eslint-from-node-modules ()
+  "Use the local eslint instead of the global."
+  (let* ((root (locate-dominating-file
+                (or (buffer-file-name) default-directory)
+                "node_modules"))
+         (eslint (and root
+                      (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                        root))))
+    (when (and eslint (file-executable-p eslint))
+      (setq-local flycheck-javascript-eslint-executable eslint))))
+
+(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
 ;; https://github.com/purcell/exec-path-from-shell
 ;; only need exec-path-from-shell on OSX
 ;; this hopefully sets up path and other vars better
